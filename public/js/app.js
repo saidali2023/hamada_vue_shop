@@ -2022,7 +2022,40 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({});
+/* harmony import */ var _routes_routes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../routes/routes */ "./resources/js/routes/routes.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      name: '',
+      email: '',
+      password: ''
+    };
+  },
+  methods: {
+    submitRegister: function submitRegister() {
+      var _this = this;
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.post('https://elnamat.com/poems/eshop/api/buyers/register', {
+        name: this.name,
+        email: this.email,
+        password: this.password
+      }).then(function (res) {
+        console.log(res);
+        localStorage.setItem('usertoken', res.data.token);
+        _this.name = '';
+        _this.email = '';
+        _this.password = '';
+        // router.push({name: 'GlobalHome'});
+        // window.location.pathname = "/login";
+      })["catch"](function (err) {
+        console.log(err);
+      });
+    }
+  }
+});
 
 /***/ }),
 
@@ -4403,85 +4436,18 @@ __webpack_require__.r(__webpack_exports__);
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
-  return _vm._m(0);
-};
-var staticRenderFns = [function () {
-  var _vm = this,
-    _c = _vm._self._c;
   return _c("div", [_c("div", {
-    staticClass: "breadcrumb-area"
-  }, [_c("div", {
-    staticClass: "container"
-  }, [_c("div", {
-    staticClass: "breadcrumb-content"
-  }, [_c("ul", [_c("li", [_c("a", {
-    attrs: {
-      href: "index.html"
-    }
-  }, [_vm._v("Home")])]), _vm._v(" "), _c("li", {
-    staticClass: "active"
-  }, [_vm._v("Login Register")])])])])]), _vm._v(" "), _c("div", {
     staticClass: "page-section mb-60"
-  }, [_c("div", {
+  }, [_c("br"), _vm._v(" "), _c("div", {
     staticClass: "container"
   }, [_c("div", {
     staticClass: "row"
   }, [_c("div", {
-    staticClass: "col-sm-12 col-md-12 col-xs-12 col-lg-6 mb-30"
-  }, [_c("form", {
-    attrs: {
-      action: "#"
-    }
-  }, [_c("div", {
-    staticClass: "login-form"
-  }, [_c("h4", {
-    staticClass: "login-title"
-  }, [_vm._v("Login")]), _vm._v(" "), _c("div", {
-    staticClass: "row"
-  }, [_c("div", {
-    staticClass: "col-md-12 col-12 mb-20"
-  }, [_c("label", [_vm._v("Email Address*")]), _vm._v(" "), _c("input", {
-    staticClass: "mb-0",
-    attrs: {
-      type: "email",
-      placeholder: "Email Address"
-    }
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "col-12 mb-20"
-  }, [_c("label", [_vm._v("Password")]), _vm._v(" "), _c("input", {
-    staticClass: "mb-0",
-    attrs: {
-      type: "password",
-      placeholder: "Password"
-    }
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "col-md-8"
-  }, [_c("div", {
-    staticClass: "check-box d-inline-block ml-0 ml-md-2 mt-10"
-  }, [_c("input", {
-    attrs: {
-      type: "checkbox",
-      id: "remember_me"
-    }
-  }), _vm._v(" "), _c("label", {
-    attrs: {
-      "for": "remember_me"
-    }
-  }, [_vm._v("Remember me")])])]), _vm._v(" "), _c("div", {
-    staticClass: "col-md-4 mt-10 mb-20 text-left text-md-right"
-  }, [_c("a", {
-    attrs: {
-      href: "#"
-    }
-  }, [_vm._v(" Forgotten pasward?")])]), _vm._v(" "), _c("div", {
-    staticClass: "col-md-12"
-  }, [_c("button", {
-    staticClass: "register-button mt-0"
-  }, [_vm._v("Login")])])])])])]), _vm._v(" "), _c("div", {
     staticClass: "col-sm-12 col-md-12 col-lg-6 col-xs-12"
   }, [_c("form", {
     attrs: {
-      action: "#"
+      action: "#",
+      method: "post"
     }
   }, [_c("div", {
     staticClass: "login-form"
@@ -4492,36 +4458,88 @@ var staticRenderFns = [function () {
   }, [_c("div", {
     staticClass: "col-md-6 col-12 mb-20"
   }, [_c("label", [_vm._v("First Name")]), _vm._v(" "), _c("input", {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: _vm.name,
+      expression: "name"
+    }],
     staticClass: "mb-0",
     attrs: {
       type: "text",
-      placeholder: "First Name"
+      placeholder: "Name"
+    },
+    domProps: {
+      value: _vm.name
+    },
+    on: {
+      input: function input($event) {
+        if ($event.target.composing) return;
+        _vm.name = $event.target.value;
+      }
     }
   })]), _vm._v(" "), _c("div", {
-    staticClass: "col-md-6 col-12 mb-20"
-  }, [_c("label", [_vm._v("Last Name")]), _vm._v(" "), _c("input", {
-    staticClass: "mb-0",
-    attrs: {
-      type: "text",
-      placeholder: "Last Name"
-    }
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "col-md-12 mb-20"
+    staticClass: "col-md-6 mb-20"
   }, [_c("label", [_vm._v("Email Address*")]), _vm._v(" "), _c("input", {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: _vm.email,
+      expression: "email"
+    }],
     staticClass: "mb-0",
     attrs: {
       type: "email",
       placeholder: "Email Address"
+    },
+    domProps: {
+      value: _vm.email
+    },
+    on: {
+      input: function input($event) {
+        if ($event.target.composing) return;
+        _vm.email = $event.target.value;
+      }
     }
   })]), _vm._v(" "), _c("div", {
     staticClass: "col-md-6 mb-20"
   }, [_c("label", [_vm._v("Password")]), _vm._v(" "), _c("input", {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: _vm.password,
+      expression: "password"
+    }],
     staticClass: "mb-0",
     attrs: {
       type: "password",
       placeholder: "Password"
+    },
+    domProps: {
+      value: _vm.password
+    },
+    on: {
+      input: function input($event) {
+        if ($event.target.composing) return;
+        _vm.password = $event.target.value;
+      }
     }
-  })]), _vm._v(" "), _c("div", {
+  })]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c("div", {
+    staticClass: "col-12"
+  }, [_c("button", {
+    staticClass: "register-button mt-0",
+    on: {
+      click: function click($event) {
+        $event.preventDefault();
+        return _vm.submitRegister.apply(null, arguments);
+      }
+    }
+  }, [_vm._v("Register")])])])])])])])])])]);
+};
+var staticRenderFns = [function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("div", {
     staticClass: "col-md-6 mb-20"
   }, [_c("label", [_vm._v("Confirm Password")]), _vm._v(" "), _c("input", {
     staticClass: "mb-0",
@@ -4529,11 +4547,7 @@ var staticRenderFns = [function () {
       type: "password",
       placeholder: "Confirm Password"
     }
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "col-12"
-  }, [_c("button", {
-    staticClass: "register-button mt-0"
-  }, [_vm._v("Register")])])])])])])])])])]);
+  })]);
 }];
 render._withStripped = true;
 
