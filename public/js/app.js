@@ -1989,6 +1989,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     login: function login() {
+      var _this = this;
       console.log('dfvuhdfuivhidufhviudfhiuhviufdhviufh');
       axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('https://elnamat.com/poems/eshop/api/buyers/login', {
         email: this.email,
@@ -1996,14 +1997,16 @@ __webpack_require__.r(__webpack_exports__);
         device_token: '1sfvfffs234'
       }).then(function (res) {
         console.log(res.data.msg);
+        localStorage.setItem('usertoken', res.data.token);
+        _this.email = '';
+        _this.password = '';
+        router.push({
+          name: 'globalhome'
+        });
       })["catch"](function (err) {
-        // console.log(err)
+        console.log(err);
       });
-
-      // this.emitMethod()
-    } // emitMethod() {
-    //     EventBus.$emit('logged-in','loggedin')
-    // }
+    }
   }
 });
 

@@ -71,8 +71,7 @@ export default {
   methods:{
       login() {
         console.log('dfvuhdfuivhidufhviudfhiuhviufdhviufh');
-        axios.post('https://elnamat.com/poems/eshop/api/buyers/login'
-        ,
+        axios.post('https://elnamat.com/poems/eshop/api/buyers/login',
             {
               email:this.email,
               password:this.password,
@@ -80,20 +79,16 @@ export default {
             }
           )
             .then((res) => {
-              console.log(res.data.msg);
-
-
+                console.log(res.data.msg);
+                localStorage.setItem('usertoken', res.data.token)
+                this.email = ''
+                this.password = ''
+                router.push({name: 'globalhome'})
             })
             .catch((err) => {
-                // console.log(err)
+                console.log(err)
             })
-
-          // this.emitMethod()
       },
-
-      // emitMethod() {
-      //     EventBus.$emit('logged-in','loggedin')
-      // }
     }
 }
   </script>
