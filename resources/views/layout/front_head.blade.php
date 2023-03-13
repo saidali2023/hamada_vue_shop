@@ -1,30 +1,40 @@
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Home Version One || limupa - Digital Products Store eCommerce Bootstrap 4 Template</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Favicon -->
+<link rel="shortcut icon" type="image/x-icon" href="front/images//favicon.png">
+<!-- Material Design Iconic Font-V2.2.0 -->
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Molla - Bootstrap eCommerce Template</title>
-    <meta name="keywords" content="HTML5 Template">
-    <meta name="description" content="Molla - Bootstrap eCommerce Template">
-    <meta name="author" content="p-themes">
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="{{asset('assets/images/icons/apple-touch-icon.png')}}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{asset('assets/images/icons/favicon-32x32.png')}}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('assets/images/icons/favicon-16x16.png')}}">
-    <link rel="manifest" href="{{asset('assets/images/icons/site.html')}}">
-    <link rel="mask-icon" href="{{asset('assets/images/icons/safari-pinned-tab.svg')}}" color="#666666">
-    <link rel="shortcut icon" href="{{asset('assets/images/icons/favicon.ico')}}">
-    <meta name="apple-mobile-web-app-title" content="Molla">
-    <meta name="application-name" content="Molla">
-    <meta name="msapplication-TileColor" content="#cc9966">
-    <meta name="msapplication-config" content="{{asset('assets/images/icons/browserconfig.xml')}}">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="{{asset('front/assets/vendor/line-awesome/line-awesome/line-awesome/css/line-awesome.min.css')}}">
-    <!-- Plugins CSS File -->
-    <link rel="stylesheet" href="{{asset('front/assets/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('front/assets/css/plugins/owl-carousel/owl.carousel.css')}}">
-    <link rel="stylesheet" href="{{asset('front/assets/css/plugins/magnific-popup/magnific-popup.css')}}">
-    <link rel="stylesheet" href="{{asset('front/assets/css/plugins/jquery.countdown.css')}}">
-    <!-- Main CSS File -->
-    <link rel="stylesheet" href="{{asset('front/assets/css/style.css')}}">
-    <link rel="stylesheet" href="{{asset('front/assets/css/skins/skin-demo-4.css')}}">
-    <link rel="stylesheet" href="{{asset('front/assets/css/demos/demo-4.css')}}">
+<link rel="stylesheet" href="{{asset('front/css/material-design-iconic-font.min.css')}}">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="{{asset('front/css/font-awesome.min.css')}}">
+<!-- Font Awesome Stars-->
+<link rel="stylesheet" href="{{asset('front/css/fontawesome-stars.css')}}">
+<!-- Meanmenu front/css -->
+<link rel="stylesheet" href="{{asset('front/css/meanmenu.css')}}">
+<!-- owl carousel front/css -->
+<link rel="stylesheet" href="{{asset('front/css/owl.carousel.min.css')}}">
+<!-- Slick Carousel front/css -->
+<link rel="stylesheet" href="{{asset('front/css/slick.css')}}">
+<!-- Animate front/css -->
+<link rel="stylesheet" href="{{asset('front/css/animate.css')}}">
+<!-- Jquery-ui front/css -->
+<link rel="stylesheet" href="{{asset('front/css/jquery-ui.min.css')}}">
+<!-- Venobox front/css -->
+<link rel="stylesheet" href="{{asset('front/css/venobox.css')}}">
+<!-- Nice Select front/css -->
+<link rel="stylesheet" href="{{asset('front/css/nice-select.css')}}">
+<!-- Magnific Popup front/css -->
+<link rel="stylesheet" href="{{asset('front/css/magnific-popup.css')}}">
+<!-- Bootstrap V4.1.3 Fremwork front/css -->
+<link rel="stylesheet" href="{{asset('front/css/bootstrap.min.css')}}">
+<!-- Helper front/css -->
+<link rel="stylesheet" href="{{asset('front/css/helper.css')}}">
+<!-- Main Style front/css -->
+<link rel="stylesheet" href="{{asset('front/style.css')}}">
+<!-- Responsive front/css -->
+<link rel="stylesheet" href="{{asset('front/css/responsive.css')}}">
+<!-- Modernizr front/js -->
+<script src="{{asset('front/js/vendor/modernizr-2.8.3.min.js')}}"></script>
