@@ -60,6 +60,7 @@
 </template>
 
 <script>
+import router from '../routes/routes'
 import axios from 'axios'
 export default {
   data(){
@@ -80,10 +81,11 @@ export default {
           )
             .then((res) => {
                 console.log(res.data.msg);
-                localStorage.setItem('usertoken', res.data.token)
-                this.email = ''
-                this.password = ''
-                router.push({name: 'globalhome'})
+                localStorage.setItem('usertoken', res.data.token);
+                this.email = '';
+                this.password = '';
+                // router.push({name: 'GlobalHome'});
+                window.location.pathname = "/globalhome";
             })
             .catch((err) => {
                 console.log(err)

@@ -1977,8 +1977,10 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _routes_routes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../routes/routes */ "./resources/js/routes/routes.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -1991,7 +1993,7 @@ __webpack_require__.r(__webpack_exports__);
     login: function login() {
       var _this = this;
       console.log('dfvuhdfuivhidufhviudfhiuhviufdhviufh');
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('https://elnamat.com/poems/eshop/api/buyers/login', {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.post('https://elnamat.com/poems/eshop/api/buyers/login', {
         email: this.email,
         password: this.password,
         device_token: '1sfvfffs234'
@@ -2000,9 +2002,8 @@ __webpack_require__.r(__webpack_exports__);
         localStorage.setItem('usertoken', res.data.token);
         _this.email = '';
         _this.password = '';
-        router.push({
-          name: 'globalhome'
-        });
+        // router.push({name: 'GlobalHome'});
+        window.location.pathname = "/globalhome";
       })["catch"](function (err) {
         console.log(err);
       });
